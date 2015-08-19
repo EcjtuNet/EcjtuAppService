@@ -196,6 +196,12 @@ select {
   border-right: .01rem dashed $theme-color;
 }
 
+.empty {
+  text-align: center;
+  color: $theme-color;
+  font: .24rem/.36rem normal Microsoft Yahei, Microsoft Yahei Light, Arial, sans-serif;
+}
+
 #get-score {
   position: relative;
   display: inline-block;
