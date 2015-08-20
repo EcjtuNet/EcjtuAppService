@@ -14,7 +14,7 @@ $(document).ready(function(){
     
 
     $(".month").text(date.getMonth());
-    $(".day").text(date.getDay());
+    $(".day").text(date.getDate());
 
     $.ajax({
         url: 'http://api.ecjtu.net/api.php',

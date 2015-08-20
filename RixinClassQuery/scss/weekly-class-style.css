@@ -3029,4 +3029,71 @@ body {
 .month, .day {
   color: #f90; }
 
+.weekly-class {
+  position: relative;
+  width: 100%;
+  font: .12rem/.18rem Microsoft Yahei Light, Microsoft Yahei, Heiti, sans-serif; }
+
+.weekly-table-head {
+  width: 9%;
+  margin-right: 91%;
+  color: #259e92;
+  font: .12rem/.48rem Microsoft Yahei Light, Microsoft Yahei, Heiti, sans-serif; }
+
+.weekday {
+  position: absolute;
+  top: 0;
+  width: 13%; }
+
+.Mon {
+  left: 9%; }
+
+.Tue {
+  left: 22%; }
+
+.Wed {
+  left: 35%; }
+
+.Thu {
+  left: 48%; }
+
+.Fri {
+  left: 61%; }
+
+.Sat {
+  left: 74%; }
+
+.Sun {
+  left: 87%; }
+
+.weekly-table-head li {
+  height: .48rem;
+  text-align: center;
+  -webkit-box-sizing: conten-box;
+  -moz-box-sizing: conten-box;
+  box-sizing: conten-box;
+  border-bottom: 0.01rem solid #259e92; }
+
+.weekday li {
+  text-align: center; }
+
+.weekly-day, .weekly-weekday {
+  height: .24rem;
+  color: #259e92;
+  font: .14rem/.18rem Microsoft Yahei Light, Microsoft Yahei, Heiti, sans-serif;
+  border-left: 0.01rem solid #259e92; }
+
+.weekly-weekday {
+  border-bottom: 0.01rem solid #259e92; }
+
+.weekday-class {
+  height: .97rem;
+  border-bottom: .01rem solid transparent;
+  overflow: hidden; }
+  .weekday-class:last-child {
+    border-bottom: 0.01rem solid #259e92; }
+
+.Mon .weekday-class {
+  border-left: 0.01rem solid #259e92; }
+
 /*# sourceMappingURL=weekly-class-style.css.map */

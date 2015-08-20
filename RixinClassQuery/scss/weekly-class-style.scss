@@ -62,3 +62,80 @@ body {
 	color: #f90;
 }
 
+.weekly-class {
+	position: relative;
+	width: 100%;
+	font: .12rem/.18rem Microsoft Yahei Light, Microsoft Yahei, Heiti, sans-serif;
+}
+
+.weekly-table-head {
+	width: 9%;
+	margin-right: 91%;
+	color: $theme-color;
+	font: .12rem/.48rem Microsoft Yahei Light, Microsoft Yahei, Heiti, sans-serif;
+}
+
+.weekday {
+	position: absolute;
+	top: 0;
+	width: 13%;
+}
+
+.Mon {
+	left: 9%;
+}
+.Tue {
+	left: 22%;
+}
+.Wed {
+	left: 35%;
+}
+.Thu {
+	left: 48%;
+}
+.Fri {
+	left: 61%;
+}
+.Sat {
+	left: 74%;
+}
+.Sun {
+	left: 87%;
+}
+
+.weekly-table-head li {
+	height: .48rem;
+	text-align: center;
+	-webkit-box-sizing: conten-box;
+	-moz-box-sizing: conten-box;
+	box-sizing: conten-box;
+	border-bottom: .01rem solid $theme-color;
+}
+
+.weekday li {
+	text-align: center;
+}
+
+.weekly-day, .weekly-weekday {
+	height: .24rem;
+	color: $theme-color;
+	font: .14rem/.18rem Microsoft Yahei Light, Microsoft Yahei, Heiti, sans-serif;
+	border-left: .01rem solid $theme-color;
+}
+.weekly-weekday {
+	border-bottom: .01rem solid $theme-color;
+}
+
+.weekday-class {
+	height: .97rem;
+	border-bottom: .01rem solid transparent;
+	overflow: hidden;
+	&:last-child {
+		border-bottom: .01rem solid $theme-color;
+	}
+}
+
+.Mon .weekday-class {
+	border-left: .01rem solid $theme-color;
+}
+
