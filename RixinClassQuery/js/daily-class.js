@@ -13,7 +13,7 @@ $(document).ready(function(){
     var id = 20132110010101;
     
 
-    $(".month").text(date.getMonth());
+    $(".month").text(date.getMonth()+1);
     $(".day").text(date.getDate());
 
     $.ajax({
