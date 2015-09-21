@@ -8,10 +8,10 @@
 $(document).ready(function(){
 
     var TermList = [
-        ["2012-2013学年 第一学期", 2012.1], 
+        ["2012-2013学年 第一学期", 2012.1],
         ["2012-2013学年 第二学期", 2012.2],
-        ["2013-2014学年 第一学期", 2013.1], 
-        ["2013-2014学年 第二学期", 2013.2], 
+        ["2013-2014学年 第一学期", 2013.1],
+        ["2013-2014学年 第二学期", 2013.2],
         ["2014-2015学年 第一学期", 2014.1],
         ["2014-2015学年 第二学期", 2014.2],
         ["2015-2016学年 第一学期", 2015.1],
@@ -29,8 +29,9 @@ $(document).ready(function(){
     }, 16);
 
     $("#get-score").click(function() {
-        var score = $(".student-id-input").val(),
-            term = $(".select_showbox").text();
+        // var score = $(".student-id-input").val(),
+        var score = window.interface.getStudentId(); // 获取学号
+        var term = $(".select_showbox").text(); // 获取学期
             // console.log(term);
         var temp;
         for (var i = 0; i < TermList.length; i++) {
@@ -41,8 +42,8 @@ $(document).ready(function(){
         };
         // console.log(term);
         // console.log(tyepof score, score);
-        var URLRixin = "http://api.ecjtu.net/score.php",
-            URLEcjtu = "http://jwc.ecjtu.jx.cn/mis_o/cj.php?sid=";        
+        var URLRixin = "http://api.ecjtu.net/score.php", // 日新API
+            URLEcjtu = "http://jwc.ecjtu.jx.cn/mis_o/cj.php?sid="; // 学校API
         $.ajax({
             url: URLRixin,
             type: 'GET',
@@ -56,7 +57,7 @@ $(document).ready(function(){
 
                 // 获取数据并添加元素
                 $.each(json, function(i, scoreInfo){
-                    
+
                     // console.log(scoreInfo.Term);
                     if(scoreInfo.Term == temp ) {
                         // console.log(scoreInfo.Name);
@@ -84,4 +85,3 @@ $(document).ready(function(){
 
     });
 })
-

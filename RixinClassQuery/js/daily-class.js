@@ -10,8 +10,8 @@ $(document).ready(function(){
         weekday;
     date.getDay() === 0 ? weekday = 7: weekday = date.getDay();
     // console.log(date, weekday);
-    var id = 20132110010101;
-    
+    var id = "20132110010101"; // window.interface.getStudentId()
+
 
     $(".month").text(date.getMonth()+1);
     $(".day").text(date.getDate());
@@ -36,7 +36,7 @@ $(document).ready(function(){
                 $(this).siblings('ul').children('.class-teacher').text(ClassStrSliceObj.Teacher);
             }
         });
-    })  
+    })
 })
 
 function classStrSlice (str) {

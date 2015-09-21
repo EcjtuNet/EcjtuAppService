@@ -106,10 +106,14 @@ body {
 .weekly-table-head li {
 	height: .48rem;
 	text-align: center;
-	-webkit-box-sizing: conten-box;
-	-moz-box-sizing: conten-box;
-	box-sizing: conten-box;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+  border-right: .01rem solid $theme-color;
 	border-bottom: .01rem solid $theme-color;
+  // &:first-child {
+  //   border-right: none;
+  // }
 }
 
 .weekday li {
@@ -120,22 +124,27 @@ body {
 	height: .24rem;
 	color: $theme-color;
 	font: .14rem/.18rem Microsoft Yahei Light, Microsoft Yahei, Heiti, sans-serif;
-	border-left: .01rem solid $theme-color;
+	border-right: .01rem solid $theme-color;
+  &:last-child {
+    border-right: .01rem solid $theme-color;
+  }
 }
 .weekly-weekday {
 	border-bottom: .01rem solid $theme-color;
 }
 
 .weekday-class {
-	height: .97rem;
+	height: .95rem;
 	border-bottom: .01rem solid transparent;
+  margin: .02rem .02rem;
+  border-radius: .04rem;
+  opacity: .75;
 	overflow: hidden;
-	&:last-child {
-		border-bottom: .01rem solid $theme-color;
-	}
+	// &:last-child {
+	// 	border-bottom: .01rem solid $theme-color;
+	// }
 }
 
 .Mon .weekday-class {
-	border-left: .01rem solid $theme-color;
+	// border-left: .01rem solid $theme-color;
 }
-

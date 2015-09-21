@@ -1,9 +1,8 @@
 @charset "UTF-8";
-/* RixinClassQuery_Weekly
+/* RixinScoreQuery
  * @author            Phantrax
  * @version           1.0.0
- * @last-time         2015.8.20
- *
+ * @last-time         2015.9.9
  */
 /* 文件载入
  ---------------------------------------------------------- */
@@ -19,32 +18,26 @@
  ----------------------------------------------------------*/
 ::-moz-selection {
   color: #fff;
-  background: #52d7c9;
+  background: #586078;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); }
 
 ::-webkit-selection {
   color: #fff;
-  background: #52d7c9;
+  background: #586078;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); }
 
 ::selection {
   color: #fff;
-  background: #52d7c9;
+  background: #586078;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); }
 
 /* 变量文件 */
 /* Font
  --------------------------------------------------*/
 @font-face {
-  font-family: 'Blade';
-  src: url("../fonts/blade_2/blade_2-webfont.eot");
-  src: url("../fonts/blade_2/blade_2-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/blade_2/blade_2-webfont.woff") format("woff"), url("../fonts/blade_2/blade_2-webfont.ttf") format("truetype"), url("../fonts/blade_2/blade_2-webfont.svg#Blade") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'flexslider-icon';
-  src: url("../fonts/flexslider-icon.eot");
-  src: url("../fonts/flexslider-icon.eot?#iefix") format("embedded-opentype"), url("../fonts/flexslider-icon.woff") format("woff"), url("../fonts/flexslider-icon.ttf") format("truetype"), url("../fonts/flexslider-icon.svg#Blade") format("svg");
+  font-family: '方正稚艺';
+  src: url("../fonts/方正稚艺.eot");
+  src: url("../fonts/方正稚艺.eot?#iefix") format("embedded-opentype"), url("../fonts/方正稚艺.woff") format("woff"), url("../fonts/方正稚艺.otf") format("otf"), url("../fonts/方正稚艺.ttf") format("truetype"), url("../fonts/方正稚艺.svg#Blade") format("svg");
   font-weight: normal;
   font-style: normal; }
 /* Web 字体 */
@@ -3005,96 +2998,7 @@ html {
   font-size: 625%; }
 
 body {
-  font-size: .14rem; }
+  font-size: .14rem;
+  background: #2D313D; }
 
-.top-border {
-  border-top: 0.01rem solid #259e92; }
-
-.right-border {
-  border-right: 0.01rem solid #259e92; }
-
-.bottom-border {
-  border-bottom: 0.01rem solid #259e92; }
-
-.left-border {
-  border-left: 0.01rem solid #259e92; }
-
-.container {
-  width: 100%; }
-
-.title {
-  text-align: center;
-  font: .14rem/.36rem Microsoft Yahei Light, Microsoft Yahei, Heiti, sans-serif; }
-
-.month, .day {
-  color: #f90; }
-
-.weekly-class {
-  position: relative;
-  width: 100%;
-  font: .12rem/.18rem Microsoft Yahei Light, Microsoft Yahei, Heiti, sans-serif; }
-
-.weekly-table-head {
-  width: 9%;
-  margin-right: 91%;
-  color: #259e92;
-  font: .12rem/.48rem Microsoft Yahei Light, Microsoft Yahei, Heiti, sans-serif; }
-
-.weekday {
-  position: absolute;
-  top: 0;
-  width: 13%; }
-
-.Mon {
-  left: 9%; }
-
-.Tue {
-  left: 22%; }
-
-.Wed {
-  left: 35%; }
-
-.Thu {
-  left: 48%; }
-
-.Fri {
-  left: 61%; }
-
-.Sat {
-  left: 74%; }
-
-.Sun {
-  left: 87%; }
-
-.weekly-table-head li {
-  height: .48rem;
-  text-align: center;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  border-right: 0.01rem solid #259e92;
-  border-bottom: 0.01rem solid #259e92; }
-
-.weekday li {
-  text-align: center; }
-
-.weekly-day, .weekly-weekday {
-  height: .24rem;
-  color: #259e92;
-  font: .14rem/.18rem Microsoft Yahei Light, Microsoft Yahei, Heiti, sans-serif;
-  border-right: 0.01rem solid #259e92; }
-  .weekly-day:last-child, .weekly-weekday:last-child {
-    border-right: 0.01rem solid #259e92; }
-
-.weekly-weekday {
-  border-bottom: 0.01rem solid #259e92; }
-
-.weekday-class {
-  height: .95rem;
-  border-bottom: .01rem solid transparent;
-  margin: .02rem .02rem;
-  border-radius: .04rem;
-  opacity: .75;
-  overflow: hidden; }
-
-/*# sourceMappingURL=weekly-class-style.css.map */
+/*# sourceMappingURL=style.css.map */
