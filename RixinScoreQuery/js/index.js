@@ -29,10 +29,10 @@ $(document).ready(function(){
     }, 16);
 
     $("#get-score").click(function() {
-        // var score = $(".student-id-input").val(),
-        var score = window.interface.getStudentId(); // 获取学号
+        var score = $(".student-id-input").val();
+        // var score = window.interface.getStudentId(); // 获取学号
         var term = $(".select_showbox").text(); // 获取学期
-            // console.log(term);
+        // console.log(term);
         var temp;
         for (var i = 0; i < TermList.length; i++) {
             if (TermList[i][0] == term) {

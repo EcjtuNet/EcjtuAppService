@@ -5,68 +5,435 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>日新课表查询</title>
     <link rel="stylesheet" href="scss/daily-class-style.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
     <script type="text/javascript" src="js/daily-class.js"></script>
 </head>
 <body>
-    <div class="container">
-        <p class="title">主人，今天是<span class="month">12</span>月<span class="day">25</span>日哦，今天的课在这里|๑´•ω•)۶</p>
-        <div class="daily-class">
-            <ul>
-                <li class="timeline top-border bottom-border">
-                    <span class="class-num top-num">1</span>
-                    <span class="class-num bottom-num">2</span>
-                    <p class="class-name"></p>
-                    <ul>
-                        <li class="class-room"> </li>
-                        <li class="class-time"> </li>
-                        <li class="class-period"> </li>
-                        <li class="class-teacher"> </li>
-                    </ul>
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s1 teal lighten-2"><a class="white-text waves-effect waves-light" href="#mon">Mon</a></li>
+                <li class="tab col s1 teal lighten-2"><a class="white-text waves-effect waves-light" href="#tue">Tue</a></li>
+                <li class="tab col s1 teal lighten-2"><a class="white-text waves-effect waves-light" href="#wed">Wed</a></li>
+                <li class="tab col s1 teal lighten-2"><a class="white-text waves-effect waves-light" href="#thu">Thu</a></li>
+                <li class="tab col s1 teal lighten-2"><a class="white-text waves-effect waves-light" href="#fri">Fri</a></li>
+                <li class="tab col s1 teal lighten-2"><a class="white-text waves-effect waves-light" href="#sat">Sat</a></li>
+                <li class="tab col s1 teal lighten-2"><a class="white-text waves-effect waves-light" href="#sun">Sun</a></li>
+            </ul>
+        </div>
+        <div id="mon" class="class-date col s12">
+            <ul class="class-table collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">1-2</span><span class="class-name teal-text"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="timeline bottom-border">
-                    <span class="class-num top-num">3</span>
-                    <span class="class-num bottom-num">4</span>
-                    <p class="class-name"></p>
-                    <ul>
-                        <li class="class-room"> </li>
-                        <li class="class-time"> </li>
-                        <li class="class-period"> </li>
-                        <li class="class-teacher"> </li>
-                    </ul>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">3-4</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="timeline bottom-border">
-                    <span class="class-num top-num">5</span>
-                    <span class="class-num bottom-num">6</span>
-                    <p class="class-name"></p>
-                    <ul>
-                        <li class="class-room"> </li>
-                        <li class="class-time"> </li>
-                        <li class="class-period"> </li>
-                        <li class="class-teacher"> </li>
-                    </ul>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">5-6</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="timeline bottom-border">
-                    <span class="class-num top-num">7</span>
-                    <span class="class-num bottom-num">8</span>
-                    <p class="class-name"></p>
-                    <ul>
-                        <li class="class-room"> </li>
-                        <li class="class-time"> </li>
-                        <li class="class-period"> </li>
-                        <li class="class-teacher"> </li>
-                    </ul>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">7-8</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="timeline bottom-border">
-                    <span class="class-num top-num">9</span>
-                    <span class="class-num bottom-num">10</span>
-                    <p class="class-name"></p>
-                    <ul>
-                        <li class="class-room"> </li>
-                        <li class="class-time"> </li>
-                        <li class="class-period"> </li>
-                        <li class="class-teacher"> </li>
-                    </ul>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">9-10</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="tue" class="class-date col s12">
+            <ul class="class-table collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">1-2</span><span class="class-name teal-text"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">3-4</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">5-6</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">7-8</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">9-10</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="wed" class="class-date col s12">
+            <ul class="class-table collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">1-2</span><span class="class-name teal-text"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">3-4</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">5-6</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">7-8</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">9-10</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="thu" class="class-date col s12">
+            <ul class="class-table collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">1-2</span><span class="class-name teal-text"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">3-4</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">5-6</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">7-8</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">9-10</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="fri" class="class-date col s12">
+            <ul class="class-table collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">1-2</span><span class="class-name teal-text"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">3-4</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">5-6</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">7-8</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">9-10</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="sat" class="class-date col s12">
+            <ul class="class-table collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">1-2</span><span class="class-name teal-text"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">3-4</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">5-6</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">7-8</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">9-10</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="sun" class="class-date col s12">
+            <ul class="class-table collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">1-2</span><span class="class-name teal-text"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">3-4</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">5-6</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">7-8</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect "><span class="class-num">9-10</span><span class="class-name teal-text text-darken-2"></span></div>
+                    <div class="collapsible-body">
+                        <ul class="class-info collection">
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">room</i><span class="class-room"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">access_time</i><span class="class-time"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">view_week</i><span class="class-period"></span></li>
+                            <li class="class-td col s6 teal-text text-lighten-2"><i class="left tiny material-icons">face</i><span class="class-teacher"></span></li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
         </div>

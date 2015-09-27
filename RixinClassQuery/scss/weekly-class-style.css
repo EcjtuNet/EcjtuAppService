@@ -3008,16 +3008,16 @@ body {
   font-size: .14rem; }
 
 .top-border {
-  border-top: 0.01rem solid #259e92; }
+  border-top: 0.01rem solid #259E92; }
 
 .right-border {
-  border-right: 0.01rem solid #259e92; }
+  border-right: 0.01rem solid #259E92; }
 
 .bottom-border {
-  border-bottom: 0.01rem solid #259e92; }
+  border-bottom: 0.01rem solid #259E92; }
 
 .left-border {
-  border-left: 0.01rem solid #259e92; }
+  border-left: 0.01rem solid #259E92; }
 
 .container {
   width: 100%; }
@@ -3037,7 +3037,7 @@ body {
 .weekly-table-head {
   width: 9%;
   margin-right: 91%;
-  color: #259e92;
+  color: #259E92;
   font: .12rem/.48rem Microsoft Yahei Light, Microsoft Yahei, Heiti, sans-serif; }
 
 .weekday {
@@ -3072,22 +3072,22 @@ body {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  border-right: 0.01rem solid #259e92;
-  border-bottom: 0.01rem solid #259e92; }
+  border-right: 0.01rem solid #259E92;
+  border-bottom: 0.01rem solid #259E92; }
 
 .weekday li {
   text-align: center; }
 
 .weekly-day, .weekly-weekday {
   height: .24rem;
-  color: #259e92;
+  color: #259E92;
   font: .14rem/.18rem Microsoft Yahei Light, Microsoft Yahei, Heiti, sans-serif;
-  border-right: 0.01rem solid #259e92; }
+  border-right: 0.01rem solid #259E92; }
   .weekly-day:last-child, .weekly-weekday:last-child {
-    border-right: 0.01rem solid #259e92; }
+    border-right: 0.01rem solid #259E92; }
 
 .weekly-weekday {
-  border-bottom: 0.01rem solid #259e92; }
+  border-bottom: 0.01rem solid #259E92; }
 
 .weekday-class {
   height: .95rem;
