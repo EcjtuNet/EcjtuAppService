@@ -35,18 +35,6 @@
 /* 变量文件 */
 /* Font
  --------------------------------------------------*/
-@font-face {
-  font-family: 'Blade';
-  src: url("../fonts/blade_2/blade_2-webfont.eot");
-  src: url("../fonts/blade_2/blade_2-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/blade_2/blade_2-webfont.woff") format("woff"), url("../fonts/blade_2/blade_2-webfont.ttf") format("truetype"), url("../fonts/blade_2/blade_2-webfont.svg#Blade") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'flexslider-icon';
-  src: url("../fonts/flexslider-icon.eot");
-  src: url("../fonts/flexslider-icon.eot?#iefix") format("embedded-opentype"), url("../fonts/flexslider-icon.woff") format("woff"), url("../fonts/flexslider-icon.ttf") format("truetype"), url("../fonts/flexslider-icon.svg#Blade") format("svg");
-  font-weight: normal;
-  font-style: normal; }
 /* Web 字体 */
 /* 圆角
  --------------------------------------------------*/
@@ -2999,166 +2987,13 @@ a, a:link, a:hover, a:active {
 
 html, body {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  font-family: GillSans, Calibri, Trebuchet, sans-serif; }
 
 html {
   font-size: 625%; }
 
 body {
   font-size: .14rem; }
-
-.container {
-  width: 95%;
-  min-width: 3.2rem;
-  margin: .32rem auto;
-  border: 0.01rem dashed #259e92; }
-
-.score {
-  width: 100%;
-  height: 100%; }
-
-.info-left, .info-right {
-  width: 50%; }
-
-.table-head, .table-cell {
-  float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  text-align: center;
-  font: .20rem/.36rem lighter Microsoft Yahei, Arial, sans-serif; }
-
-.table-head {
-  color: #259e92; }
-
-.top-border {
-  border-top: 0.01rem dashed #259e92; }
-
-.right-border {
-  border-right: 0.01rem dashed #259e92; }
-
-.bottom-border {
-  border-bottom: 0.01rem dashed #259e92; }
-
-.left-border {
-  border-left: 0.01rem dashed #259e92; }
-
-.term-select-head {
-  width: 25%; }
-
-.term-select-cell {
-  width: 75%; }
-
-.select-correct {
-  height: .37rem; }
-
-.name-input, .student-id-input {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  padding-left: .12rem;
-  border: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font: .20rem/.36rem normal Microsoft Yahei Light, Arial, sans-serif; }
-
-select {
-  display: none; }
-
-.select_box {
-  position: relative;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  border: none;
-  font: .20rem/.36rem normal Microsoft Yahei Light, Arial, sans-serif;
-  color: #000;
-  width: 100%;
-  z-index: 999; }
-
-.select_showbox {
-  position: relative;
-  border-bottom: 1px solid transparent;
-  height: .36rem;
-  padding-left: .05rem;
-  z-index: 999; }
-  .select_showbox:after {
-    content: "";
-    position: absolute;
-    top: .135rem;
-    right: .09rem;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-top: 0.09rem solid #259e92;
-    border-left: .09rem solid transparent;
-    border-bottom: none;
-    border-right: .09rem solid transparent; }
-
-.select_option {
-  position: absolute;
-  left: -.01rem;
-  border: 0.01rem solid #259e92;
-  border-top: none;
-  width: 100%;
-  display: none;
-  z-index: 999;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); }
-
-.select_option li {
-  width: 100%;
-  z-index: 999;
-  padding-left: .05rem; }
-
-.select_option li.selected {
-  background-color: #F3F3F3;
-  color: #999; }
-
-.select_option li.hover {
-  background: #259e92;
-  color: #fff; }
-
-.show {
-  width: 100%;
-  padding-top: 1.47rem; }
-
-.show-left {
-  width: 80%; }
-
-.show-right {
-  width: 20%; }
-
-.course, .course-score {
-  border-bottom: 0.01rem dashed #259e92;
-  background: #cff; }
-
-.course {
-  border-right: 0.01rem dashed #259e92; }
-
-.empty {
-  text-align: center;
-  color: #259e92;
-  font: .20rem/.36rem normal Microsoft Yahei, Microsoft Yahei Light, Arial, sans-serif; }
-
-#get-score {
-  position: relative;
-  display: inline-block;
-  width: 2.30rem;
-  height: .36rem;
-  border: 0.01rem dashed #259e92;
-  background: #fff;
-  border-radius: .36rem;
-  margin: .12rem 0;
-  padding: 0;
-  font: .20rem/.34rem normal Microsoft Yahei Light, Arial, sans-serif;
-  color: #259e92; }
-  #get-score:hover, #get-score:visited {
-    color: #fff;
-    background: #259e92; }
 
 /*# sourceMappingURL=style.css.map */
