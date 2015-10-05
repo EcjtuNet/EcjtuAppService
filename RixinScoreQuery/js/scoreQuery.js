@@ -19,22 +19,16 @@ $(document).ready(function() {
         ["2015-2016学年 第二学期", 2015.2],
     ]
 
-    // 初始化查询按钮位置
-    // var initialBtn = setInterval(function () {
-    //     var button = $("#get-score"),
-    //         container = $(".container");
-    //     // console.log(container.width(), button.width());
-    //     var leftRem = (container.width() - button.width())/200 + "rem";
-    //     // console.log(leftRem);
-    //     button.css('left', leftRem);
-    // }, 16);
-
-    var scorePolling = setInterval(scoreQuery(), 16);
-
+    var scorePolling = window.setInterval(scoreQuery, 250);
+    // $('input#student_id').change(function(event) {
+    //     if ($(this).val().length < 14) {
+    //         window.clearInterval(scorePolling);
+    //     }
+    // });
     function scoreQuery() {
-        var score = $('#student_id').val();
-        var term = $('.select-dropdown').val();
-        // console.log(score term);
+        var score = $('#student_id').val(),
+            term = $('.select-dropdown').val();
+        // console.log(score+term);
         var temp;
         for (var i = 0; i < TermList.length; i++) {
             if (TermList[i][0] == term) {
@@ -60,7 +54,7 @@ $(document).ready(function() {
                         $('ul.collection').append("<li class='collection-item row'><span class='score-course col s10'>" + scoreInfo.Course + "</span><span class='score-mark col s2 center-align'>" + scoreInfo.Score + "</span></li>");
                         $('.collection-item').css('padding', '0px');
                         $('.score-course').css('border-right', '1px solid #ddd');
-                        $('.score-mark').css('height', $(this).siblings('.score-course').height());
+                        $('.score-mark').css({'height': $(this).siblings('.score-course').height(), 'padding': '0px', 'line-height': $(this).siblings('.score-course').height()});
                         count++;
                     }
                 })
@@ -72,12 +66,10 @@ $(document).ready(function() {
                 $('span.score-mark').each(function() {
                     if ($(this).text() < 60 || $(this).text() == "不及格" || $(this).text() == "不合格") {
                         // console.log("X");
-                        $(this).css('background', '#f96')
-                            .prev().css('background', '#f96');
+                        $(this).parent('.collection-item').css('color', '#F44336');
                     };
                 });
             }
         });
-
     };
 })

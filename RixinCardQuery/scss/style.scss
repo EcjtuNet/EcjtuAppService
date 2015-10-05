@@ -33,8 +33,13 @@ html {
 
 body {
   font-size: .14rem;
-  background: $theme-color;
 }
 
+.cny {
+    margin-right: .6rem;
+}
 
-
+.card-cash {
+    font-family: "Roboto", Microsoft Yahei, sans-serif;
+    font-size: 3.6rem;
+}
