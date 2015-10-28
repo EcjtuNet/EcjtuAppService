@@ -19,12 +19,21 @@ $(document).ready(function() {
         ["2015-2016学年 第二学期", 2015.2],
     ]
 
-    var scorePolling = window.setInterval(scoreQuery, 250);
-    // $('input#student_id').change(function(event) {
-    //     if ($(this).val().length < 14) {
-    //         window.clearInterval(scorePolling);
-    //     }
-    // });
+    // var scorePolling = window.setInterval(scoreQuery, 250);
+
+    scoreQuery()
+
+    var name = $('input#student_name'),
+        id = $('input#student_id'),
+        select = $('option[selected]');
+    if (name.val() && id.val() && select.val()) {
+        $(name.val() || id.val() || select.val()).on('change', function(event) {
+            event.preventDefault();
+            scoreQuery();
+        });
+    };
+
+
     function scoreQuery() {
         var score = $('#student_id').val(),
             term = $('.select-dropdown').val();
@@ -46,7 +55,7 @@ $(document).ready(function() {
             success: function (json) {
                 var count = 0;
                 $('ul.collection').empty()
-                    .append('<li class="collection-header"><h6 class="teal-text text-darken-2">成績明細</h6></li>')
+                    .append('<li class="collection-header"><h6 class="teal-text text-darken-2">成绩明细</h6></li>')
 
                 $.each(json, function (i, scoreInfo) {
                     if (scoreInfo.Term == temp) {
@@ -60,6 +69,7 @@ $(document).ready(function() {
                 })
                 if (count == 0) {
                     $("ul.collection").empty()
+                        .append('<li class="collection-header"><h6 class="teal-text text-darken-2">成绩明细</h6></li>')
                         .append("<p class='empty'> 没有查到成绩咕OuO~ </p>");
                 };
                 // 不及格成绩标记
