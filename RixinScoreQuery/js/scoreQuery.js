@@ -39,6 +39,11 @@ $(document).ready(function() {
             };
             
         });
+        $('ul.select-dropdown').on('click', function(event) {
+            event.preventDefault();
+            scoreQuery();
+            // console.log(event);;
+        });
     };
 
 
@@ -67,13 +72,11 @@ $(document).ready(function() {
 
                 $.each(json, function (i, scoreInfo) {
                     if (scoreInfo.Term == temp) {
+                        $('#student_name, #student_id, .select-dropdown').css('font', '1.2rem normal Roboto, Microsoft Yahei, sans-serif');
                         $('#student_name').val(scoreInfo.Name);
                         $('ul.collection').append("<li class='collection-item row'><span class='score-course col s10'>" + scoreInfo.Course + "</span><span class='score-mark col s2 center-align'>" + scoreInfo.Score + "</span></li>");
                         $('.collection-item').css('padding', '0px')
-                            .children('.score-course, .score-mark').css({
-                                paddingTop: '6px',
-                                paddingBottom: '6px'
-                            });
+                            .children('.score-course, .score-mark').css({paddingTop: '6px', paddingBottom: '6px'});
                         $('.score-course').css('border-right', '1px solid #ddd');
                         $('.score-mark').css({'height': $(this).siblings('.score-course').height(), 'padding-left': '0px', 'padding-right': '0px', 'line-height': $(this).siblings('.score-course').height()});
                         count++;
