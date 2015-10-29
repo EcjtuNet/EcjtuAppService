@@ -21,15 +21,23 @@ $(document).ready(function() {
 
     // var scorePolling = window.setInterval(scoreQuery, 250);
 
-    scoreQuery()
+    scoreQuery();
 
     var name = $('input#student_name'),
         id = $('input#student_id'),
-        select = $('option[selected]');
-    if (name.val() && id.val() && select.val()) {
-        $(name.val() || id.val() || select.val()).on('change', function(event) {
+        select = $('.select-dropdown');
+        // select = $('option[selected]');
+    var ChineseRegExp = /^[\u4E00-\u9FA5\uF900-\uFA2D]*$/;
+    // console.log(name.val() !== "" && id.val() !== "" && select.val() !== "")
+    if (name.val() !== "" && id.val() !== "" && select.val() !== "") {
+        // console.log($('#student_name, #student_id, option[selected]'))
+        $('#student_name, #student_id').bind('change', function(event) {
             event.preventDefault();
-            scoreQuery();
+
+            if (ChineseRegExp.test(name.val()) && (id.val().length === 14 || 16)) {
+                scoreQuery();
+            };
+            
         });
     };
 
@@ -61,16 +69,20 @@ $(document).ready(function() {
                     if (scoreInfo.Term == temp) {
                         $('#student_name').val(scoreInfo.Name);
                         $('ul.collection').append("<li class='collection-item row'><span class='score-course col s10'>" + scoreInfo.Course + "</span><span class='score-mark col s2 center-align'>" + scoreInfo.Score + "</span></li>");
-                        $('.collection-item').css('padding', '0px');
+                        $('.collection-item').css('padding', '0px')
+                            .children('.score-course, .score-mark').css({
+                                paddingTop: '6px',
+                                paddingBottom: '6px'
+                            });
                         $('.score-course').css('border-right', '1px solid #ddd');
-                        $('.score-mark').css({'height': $(this).siblings('.score-course').height(), 'padding': '0px', 'line-height': $(this).siblings('.score-course').height()});
+                        $('.score-mark').css({'height': $(this).siblings('.score-course').height(), 'padding-left': '0px', 'padding-right': '0px', 'line-height': $(this).siblings('.score-course').height()});
                         count++;
                     }
                 })
                 if (count == 0) {
                     $("ul.collection").empty()
                         .append('<li class="collection-header"><h6 class="teal-text text-darken-2">成绩明细</h6></li>')
-                        .append("<p class='empty'> 没有查到成绩咕OuO~ </p>");
+                        .append("<p class='empty'> 没有查到成绩咕 OuO </p>");
                 };
                 // 不及格成绩标记
                 $('span.score-mark').each(function() {
