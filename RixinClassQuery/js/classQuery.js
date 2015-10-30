@@ -33,27 +33,48 @@ $(document).ready(function(){
     date.getDay() === 0 ? weekday = 7: weekday = date.getDay();
     // console.log(date, weekday);
 
+    /**
+     * 初始化日期頁面顯示
+     */
     $(document).find('li.tab').each(function(index) {
         // console.log(index+1)
         if (index + 1 == weekday) {$(this).children('a').click()};
     });
 
+    /**
+     * 滑動切換日期模塊
+     */
+    var startX, startY,
+        endX, endY,
+        X, Y,
+        windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+        windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
     $(document).bind('touchstart', function(event) {
-        var startX = event.originalEvent.changedTouches[0].clientX,
-            startY = event.originalEvent.changedTouches[0].clientY;
-        console.log(startX, startY);
+        startX = event.originalEvent.changedTouches[0].clientX;
+        startY = event.originalEvent.changedTouches[0].clientY;
+        // console.log(startX, startY);
+    });
+    $(document).bind('touchend', function(event) {
+        endX = event.originalEvent.changedTouches[0].clientX;
+        endY = event.originalEvent.changedTouches[0].clientY;
+        X = endX - startX;
+        Y = endY - startY;
+        // console.log(endX, endY);
+        // console.log(X, Y)
+        // console.log(X / windowWidth)
+        if (X / windowWidth > 0.25) {
+            $(document).find('ul.tabs').find('a.active').parent('li').next().children('a').click();
+        } else if (X / windowWidth < -0.25) {
+            $(document).find('ul.tabs').find('a.active').parent('li').prev().children('a').click();
+        }
     });
 
-    $(document).bind('touchend', function(event) {
-        var endX = event.originalEvent.changedTouches[0].clientX,
-            endY = event.originalEvent.changedTouches[0].clientY;
-        console.log(endX, endY);
-    });
+
     // document.addEventListener("touchmove", function(event){
     //     console.log(event.changedTouches[0].clientX);
     // }, false);
 
-
+    
     window.jsonp = function(json) {
         // console.log(json);
         json = json&&json[0];
