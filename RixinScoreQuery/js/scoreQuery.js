@@ -17,11 +17,14 @@ $(document).ready(function() {
         ["2014-2015学年 第二学期", 2014.2],
         ["2015-2016学年 第一学期", 2015.1],
         ["2015-2016学年 第二学期", 2015.2],
-    ]
-
+    ];
+    var selfId;
+    window.rixin.getStudentId(function(id){
+        selfId = id;
+    });
     // var scorePolling = window.setInterval(scoreQuery, 250);
 
-    scoreQuery();
+    scoreQuery(selfId);
 
     var name = $('input#student_name'),
         id = $('input#student_id'),
@@ -47,8 +50,8 @@ $(document).ready(function() {
     };
 
 
-    function scoreQuery() {
-        var score = $('#student_id').val(),
+    function scoreQuery(id) {
+        var score = selfId || $('#student_id').val(),
             term = $('.select-dropdown').val();
         // console.log(score+term);
         var temp;
@@ -66,6 +69,7 @@ $(document).ready(function() {
             dataType: 'jsonp',
             data: {s: score},
             success: function (json) {
+                // console.log(json)
                 var count = 0;
                 $('ul.collection').empty()
                     .append('<li class="collection-header"><h6 class="teal-text text-darken-2">成绩明细</h6></li>')
