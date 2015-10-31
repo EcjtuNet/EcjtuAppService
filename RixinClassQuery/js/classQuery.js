@@ -63,9 +63,9 @@ $(document).ready(function(){
         // console.log(X, Y)
         // console.log(X / windowWidth)
         if (X / windowWidth > 0.25) {
-            $(document).find('ul.tabs').find('a.active').parent('li').next().children('a').click();
-        } else if (X / windowWidth < -0.25) {
             $(document).find('ul.tabs').find('a.active').parent('li').prev().children('a').click();
+        } else if (X / windowWidth < -0.25) {
+            $(document).find('ul.tabs').find('a.active').parent('li').next().children('a').click();
         }
     });
 
