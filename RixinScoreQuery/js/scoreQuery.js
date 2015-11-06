@@ -26,26 +26,21 @@ $(document).ready(function() {
 
     scoreQuery(selfId);
 
-    var name = $('input#student_name'),
-        id = $('input#student_id'),
-        select = $('.select-dropdown');
+    var sName = $('input#student_name'),
+        sId = $('input#student_id'),
+        sSelect = $('.select-dropdown');
         // select = $('option[selected]');
     var ChineseRegExp = /^[\u4E00-\u9FA5\uF900-\uFA2D]*$/;
-    // console.log(name.val() !== "" && id.val() !== "" && select.val() !== "")
-    if (name.val() !== "" && id.val() !== "" && select.val() !== "") {
-        // console.log($('#student_name, #student_id, option[selected]'))
+    if (name.val() !== "" && sid.val() !== "" && sSelect.val() !== "") {
         $('#student_name, #student_id').bind('change', function(event) {
             event.preventDefault();
-
-            if (ChineseRegExp.test(name.val()) && (id.val().length === 14 || 16)) {
+            if (ChineseRegExp.test(sName.val()) && (sId.val().length === 14 || 16)) {
                 scoreQuery();
             };
-            
         });
         $('ul.select-dropdown').on('click', function(event) {
             event.preventDefault();
             scoreQuery();
-            // console.log(event);;
         });
     };
 
