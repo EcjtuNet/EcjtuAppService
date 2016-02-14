@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: local('Material Icons'), local('MaterialIcons-Regular'), url(./font/material-design-icons/Material-Design-Icons.woff), url(https://fonts.gstatic.com/s/materialicons/v8/2fcrYFNaTjcS6g4U3t-Y5RV6cRhDpPC5P4GCEJpqGoc.woff) format('woff');
+        }
+        .material-icons {
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px;
+          line-height: 1;
+          letter-spacing: normal;
+          text-transform: none;
+          display: inline-block;
+          white-space: nowrap;
+          word-wrap: normal;
+          direction: ltr;
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body>
+    <ul class="wrapper">
+      <!-- 己方對話框（加載動畫） -->
+      <li class="chat-box self default-skin">
+        <span class="chat-avatar-box">
+          <!-- Preloader -->
+          <div class="preloader-wrapper active load">
+            <div class="spinner-layer spinner-blue">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+            <div class="spinner-layer spinner-red">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+            <div class="spinner-layer spinner-yellow">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+            <div class="spinner-layer spinner-green">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Arrow -->
+          <span class="chat-content-arrow"></span>
+          <!-- Avatar -->
+          <a href="#!" class="chat-avatar"><img src="./imgs/self.jpg" alt="" /></a>
+        </span>
+        <span class="chat-content-box z-depth-1">
+          <p class="chat-content text">Lorem Ipsum</p>
+        </span>
+      </li>
+      <!-- 己方對話框 -->
+      <li class="chat-box self hangout-skin">
+        <span class="chat-avatar-box">
+          <span class="chat-content-arrow"></span>
+          <a href="#!" class="chat-avatar"><img src="./imgs/self.jpg" alt="" /></a>
+        </span>
+        <span class="chat-content-box">
+          <p class="chat-content text">If you already have a (iOS-only) React Native project and want to add Android support, you need to execute the following commands in your existing project directory:</p>
+        </span>
+      </li>
+      <!-- 對方對話框 -->
+      <li class="chat-box dial hangout-skin">
+        <span class="chat-avatar-box">
+          <span class="chat-content-arrow"></span>
+          <a href="#!" class="chat-avatar"><img src="./imgs/dial.jpg" alt="" /></a>
+        </span>
+        <span class="chat-content-box">
+          <p class="chat-content text">根据敏感关键字来回溯传入的参数，是一种逆向追踪的思路，我们也提到了这种方式的优缺点，实际上在需要快速寻找漏洞的情况下用回溯参数的方式是非常有效的，但这种方式并不适合运用在企业中做安全运营时的场景，在企业中做自身产品的代码审计时，我们需要了解整个应用的业务逻辑，才能挖掘到更多更有价值的漏洞</p>
+        </span>
+      </li>
+      <li class="chat-box dial default-skin">
+        <span class="chat-avatar-box">
+          <span class="chat-content-arrow"></span>
+          <a href="#!" class="chat-avatar"><img src="./imgs/dial.jpg" alt="" /></a>
+        </span>
+        <span class="chat-content-box z-depth-1">
+          <p class="chat-content text">Byterun is a Python interpreter implemented in Python. Through my work on Byterun, I was surprised and delighted to discover that the fundamental structure of the Python interpreter fits easily into the 500-line size restriction. </p>
+        </span>
+      </li>
+      <li class="chat-box self hangout-skin">
+        <span class="chat-avatar-box">
+          <span class="chat-content-arrow"></span>
+          <a href="#!" class="chat-avatar"><img src="./imgs/self.jpg" alt="" /></a>
+        </span>
+        <span class="chat-content-box">
+          <p class="chat-content text">If you already have a (iOS-only) React Native project and want to add Android support</p>
+        </span>
+      </li>
+      <li class="chat-box self hangout-skin">
+        <span class="chat-avatar-box">
+          <span class="chat-content-arrow"></span>
+          <a href="#!" class="chat-avatar"><img src="./imgs/self.jpg" alt="" /></a>
+        </span>
+        <span class="chat-content-box">
+          <p class="chat-content text">If you already have a (iOS-only) React Native project and want to add Android support</p>
+        </span>
+      </li>
+      <li class="chat-box self hangout-skin">
+        <span class="chat-avatar-box">
+          <span class="chat-content-arrow"></span>
+          <a href="#!" class="chat-avatar"><img src="./imgs/self.jpg" alt="" /></a>
+        </span>
+        <span class="chat-content-box">
+          <p class="chat-content text">If you already have a (iOS-only) React Native project and want to add Android support</p>
+        </span>
+      </li>
+      <li class="chat-box self hangout-skin">
+        <span class="chat-avatar-box">
+          <span class="chat-content-arrow"></span>
+          <a href="#!" class="chat-avatar"><img src="./imgs/self.jpg" alt="" /></a>
+        </span>
+        <span class="chat-content-box">
+          <p class="chat-content text">If you already have a (iOS-only) React Native project and want to add Android support</p>
+        </span>
+      </li>
+      <!-- 聊天輸入框 -->
+      <div class="input-bar z-depth-2">
+        <span class="input-area-box">
+          <p class="input-area-pre"></p>
+          <!-- <input class="input-area" type="text" placeholder="Send Messages..." /> -->
+          <textarea class="input-area"></textarea>
+        </span>
+        <a href="" class="input-submit"><i class="material-icons input-submit-icon">send</i></a>
+      </div>
+    </ul>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script> -->
+    <script type="text/javascript" src="js/chat.js"></script>
+</body>
+</html>
