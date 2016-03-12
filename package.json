@@ -1,0 +1,30 @@
+{
+  "name": "ecjtu-app-service",
+  "version": "1.0.0",
+  "description": "App Service for Ecjtu",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline",
+    "build": "webpack --progress --profile --colors --config webpack.production.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Phantr4x@github.com/EcjtuNet/EcjtuAppService.git"
+  },
+  "keywords": [
+    "Ecjtu"
+  ],
+  "author": "Phantr4x",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EcjtuNet/EcjtuAppService/issues"
+  },
+  "homepage": "https://github.com/EcjtuNet/EcjtuAppService#readme",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "html-webpack-plugin": "^2.9.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.12",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
